@@ -50,7 +50,6 @@ for doc, meta in list(zip(results["documents"], results["metadatas"]))[:10]:
     print(f"• {doc}  — {meta}")
 
 # 🧠 Set your OpenAI key
-openai.api_key = "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"
 
 def ask_question(query, n_results=1000):
     results = collection.query(query_texts=[query], n_results=n_results)
