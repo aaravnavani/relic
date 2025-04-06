@@ -6,6 +6,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import LoginButton from '@/components/LoginButton'; // Import your login button component
 
 export default function TabTwoScreen() {
   return (
@@ -22,6 +23,12 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
+
+      {/* Render the Login Button */}
+      <ThemedView style={styles.buttonContainer}>
+        <LoginButton />
+      </ThemedView>
+
       <ThemedText>This app includes example code to help you get started.</ThemedText>
       <Collapsible title="File-based routing">
         <ThemedText>
@@ -105,5 +112,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  buttonContainer: {
+    marginHorizontal: 16,
+    marginBottom: 16,
   },
 });
